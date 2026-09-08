@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="test()">Test Backend</button>
+  <div id="result"></div>
+  <script>
+    async function test() {
+      try {
+        const res = await fetch("https://insurebot-backend-50.onrender.com/");
+        const data = await res.json();
+        document.getElementById("result").innerText = JSON.stringify(data);
+      } catch(e) {
+        document.getElementById("result").innerText = "ERROR: " + e.message;
+      }
+    }
+  </script>
+</body>
+</html>

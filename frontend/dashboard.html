@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - InsureBot</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <nav class="navbar solid" style="padding:0 40px;">
+        <div class="nav-logo">🛡️ InsureBot</div>
+        <div class="nav-actions">
+            <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+            <a href="claim.html" class="btn btn-ghost" style="font-size:13px;">New Claim</a>
+            <button onclick="logout()" class="btn btn-ghost" style="font-size:13px;">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-page">
+        <div class="dashboard-hero">
+            <h1 class="dashboard-greeting" id="greeting">Good afternoon, User</h1>
+            <p class="dashboard-sub">What would you like to do today?</p>
+            <div class="search-bar">
+                <input type="text" id="dashboardSearch" placeholder="Ask InsureBot anything...">
+                <button>➤</button>
+            </div>
+            <div class="quick-actions">
+                <a href="claim.html" class="quick-pill">Analyze a claim</a>
+                <a href="policy.html" class="quick-pill">Check my policy</a>
+                <a href="claim.html" class="quick-pill">Track claim status</a>
+                <button class="quick-pill" onclick="alert('Coming soon')">Calculate premium</button>
+            </div>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="glass-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                    <h3 style="font-size:16px;">Recent Claims</h3>
+                    <a href="claim.html" style="font-size:12px;color:var(--accent-primary);">View all</a>
+                </div>
+                <div id="recentClaims" style="color:var(--text-muted);font-size:13px;">Loading...</div>
+            </div>
+            <div class="glass-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                    <h3 style="font-size:16px;">My Policies</h3>
+                    <a href="policy.html" style="font-size:12px;color:var(--accent-primary);">Upload</a>
+                </div>
+                <div style="color:var(--text-muted);font-size:13px;">No policies uploaded yet.<br><a href="policy.html" style="color:var(--accent-primary);">Upload your first policy</a></div>
+            </div>
+            <div class="glass-card" style="cursor:pointer;" onclick="document.getElementById('chatbotToggle').click()">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                    <h3 style="font-size:16px;">Ask InsureBot</h3>
+                    <span style="font-size:20px;">🤖</span>
+                </div>
+                <div style="color:var(--text-muted);font-size:13px;">How can Copilot help me?<br><span style="font-size:11px;">Just now</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-panel" id="chatbotPanel">
+            <div class="chatbot-header">
+                <h4>InsureBot</h4>
+                <button onclick="document.getElementById('chatbotPanel').classList.remove('open')" style="background:none;color:var(--text-muted);font-size:18px;">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="chat-message bot">Hello! I'm InsureBot. How can I help you today?</div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Theme toggle */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.theme-toggle:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.08);
+}
+
+[data-theme="light"] .navbar.solid {
+  background: rgba(240,242,248,0.85);
+}
+
+[data-theme="light"] .hero {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,92,246,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(59,130,246,0.08) 0%, transparent 50%),
+    linear-gradient(135deg, #F0F2F8 0%, #E8EAF0 50%, #F5F7FC 100%);
+}
+
+[data-theme="light"] .dashboard-page {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(59,130,246,0.04) 0%, transparent 40%),
+    var(--bg-base);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsureBot - Insurance Claim Intelligence</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <nav class="navbar transparent">
+        <div class="nav-logo">🛡️ InsureBot</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#types">Claim Types</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+            <a href="login.html" class="btn btn-ghost">Login</a>
+            <a href="login.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">Claim smarter.<br><span class="accent">Settle faster.</span></h1>
+            <p class="hero-sub">AI-powered insurance claims platform. Upload damage photos, analyze policies, and get instant fraud detection.</p>
+            <div class="hero-cta">
+                <a href="login.html" class="btn btn-outline" style="padding:16px 32px;font-size:16px;">Start Your Claim</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">Scroll</div>
+    </section>
+
+    <section id="features" style="padding:80px 40px;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <h2 style="font-size:32px;text-align:center;margin-bottom:48px;">Intelligent Features</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+                <div class="glass-card">
+                    <div style="font-size:32px;margin-bottom:16px;">📸</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Damage Detection</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">Upload photos and get AI-powered damage severity analysis with repair estimates.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size:32px;margin-bottom:16px;">📋</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Policy Analyzer</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">Understand what's covered, hidden benefits, and dangerous clauses in your policy.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size:32px;margin-bottom:16px;">💡</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Pre-Claim Advisor</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">Get advice before filing to maximize your payout and avoid rejection.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size:32px;margin-bottom:16px;">🤖</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">InsureBot</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">24/7 AI assistant for all your insurance questions and claim guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" style="padding:80px 40px;background:var(--bg-surface);">
+        <div style="max-width:1000px;margin:0 auto;text-align:center;">
+            <h2 style="font-size:32px;margin-bottom:48px;">How It Works</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;">
+                <div>
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--accent-primary);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">1</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Submit</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">Upload damage photos and describe the incident.</p>
+                </div>
+                <div>
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--accent-primary);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">2</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Analyze</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">AI analyzes damage, estimates cost, and checks fraud risk.</p>
+                </div>
+                <div>
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--accent-primary);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">3</div>
+                    <h3 style="font-size:18px;margin-bottom:8px;">Resolve</h3>
+                    <p style="color:var(--text-muted);font-size:14px;">Get settlement prediction and track claim status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="types" style="padding:80px 40px;">
+        <div style="max-width:1000px;margin:0 auto;text-align:center;">
+            <h2 style="font-size:32px;margin-bottom:48px;">Claim Types</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;">
+                <div class="glass-card" style="text-align:center;">
+                    <div style="font-size:40px;margin-bottom:12px;">🚗</div>
+                    <div style="font-weight:500;">Car</div>
+                </div>
+                <div class="glass-card" style="text-align:center;">
+                    <div style="font-size:40px;margin-bottom:12px;">🏠</div>
+                    <div style="font-weight:500;">House</div>
+                </div>
+                <div class="glass-card" style="text-align:center;">
+                    <div style="font-size:40px;margin-bottom:12px;">🏥</div>
+                    <div style="font-weight:500;">Health</div>
+                </div>
+                <div class="glass-card" style="text-align:center;">
+                    <div style="font-size:40px;margin-bottom:12px;">🏢</div>
+                    <div style="font-weight:500;">Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding:80px 40px;background:var(--bg-surface);text-align:center;">
+        <h2 style="font-size:32px;margin-bottom:24px;">Start your claim analysis today</h2>
+        <a href="login.html" class="btn btn-primary" style="padding:16px 32px;font-size:16px;">Get Started Free</a>
+    </section>
+
+    
+
+    <script src="js/api.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
